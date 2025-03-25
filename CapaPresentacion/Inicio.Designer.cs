@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.menu = new System.Windows.Forms.MenuStrip();
+            this.MenuUsuarios = new FontAwesome.Sharp.IconMenuItem();
+            this.MenuMantenimiento = new FontAwesome.Sharp.IconMenuItem();
+            this.MenuVentas = new FontAwesome.Sharp.IconMenuItem();
+            this.MenuCompras = new FontAwesome.Sharp.IconMenuItem();
+            this.MenuClientes = new FontAwesome.Sharp.IconMenuItem();
+            this.MenuProveedores = new FontAwesome.Sharp.IconMenuItem();
+            this.MenuReportes = new FontAwesome.Sharp.IconMenuItem();
             this.MenuAcercaDe = new FontAwesome.Sharp.IconMenuItem();
             this.Menutitulo = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
-            this.MenuReportes = new FontAwesome.Sharp.IconMenuItem();
-            this.MenuProveedores = new FontAwesome.Sharp.IconMenuItem();
-            this.MenuClientes = new FontAwesome.Sharp.IconMenuItem();
-            this.MenuCompras = new FontAwesome.Sharp.IconMenuItem();
-            this.MenuVentas = new FontAwesome.Sharp.IconMenuItem();
-            this.MenuMantenimiento = new FontAwesome.Sharp.IconMenuItem();
-            this.MenuUsuarios = new FontAwesome.Sharp.IconMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,9 +59,86 @@
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
             // 
+            // MenuUsuarios
+            // 
+            this.MenuUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            this.MenuUsuarios.IconColor = System.Drawing.Color.Black;
+            this.MenuUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuUsuarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuUsuarios.Name = "MenuUsuarios";
+            this.MenuUsuarios.Size = new System.Drawing.Size(64, 67);
+            this.MenuUsuarios.Text = "Usuarios";
+            this.MenuUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // MenuMantenimiento
+            // 
+            this.MenuMantenimiento.IconChar = FontAwesome.Sharp.IconChar.ScrewdriverWrench;
+            this.MenuMantenimiento.IconColor = System.Drawing.Color.Black;
+            this.MenuMantenimiento.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuMantenimiento.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuMantenimiento.Name = "MenuMantenimiento";
+            this.MenuMantenimiento.Size = new System.Drawing.Size(101, 67);
+            this.MenuMantenimiento.Text = "mantenimiento";
+            this.MenuMantenimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // MenuVentas
+            // 
+            this.MenuVentas.IconChar = FontAwesome.Sharp.IconChar.Tags;
+            this.MenuVentas.IconColor = System.Drawing.Color.Black;
+            this.MenuVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuVentas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuVentas.Name = "MenuVentas";
+            this.MenuVentas.Size = new System.Drawing.Size(60, 67);
+            this.MenuVentas.Text = "Ventas";
+            this.MenuVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // MenuCompras
+            // 
+            this.MenuCompras.IconChar = FontAwesome.Sharp.IconChar.DollyFlatbed;
+            this.MenuCompras.IconColor = System.Drawing.Color.Black;
+            this.MenuCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuCompras.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuCompras.Name = "MenuCompras";
+            this.MenuCompras.Size = new System.Drawing.Size(67, 67);
+            this.MenuCompras.Text = "Compras";
+            this.MenuCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // MenuClientes
+            // 
+            this.MenuClientes.IconChar = FontAwesome.Sharp.IconChar.UserGroup;
+            this.MenuClientes.IconColor = System.Drawing.Color.Black;
+            this.MenuClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuClientes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuClientes.Name = "MenuClientes";
+            this.MenuClientes.Size = new System.Drawing.Size(61, 67);
+            this.MenuClientes.Text = "Clientes";
+            this.MenuClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // MenuProveedores
+            // 
+            this.MenuProveedores.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
+            this.MenuProveedores.IconColor = System.Drawing.Color.Black;
+            this.MenuProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuProveedores.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuProveedores.Name = "MenuProveedores";
+            this.MenuProveedores.Size = new System.Drawing.Size(84, 67);
+            this.MenuProveedores.Text = "Proveedores";
+            this.MenuProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // MenuReportes
+            // 
+            this.MenuReportes.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
+            this.MenuReportes.IconColor = System.Drawing.Color.Black;
+            this.MenuReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MenuReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MenuReportes.Name = "MenuReportes";
+            this.MenuReportes.Size = new System.Drawing.Size(65, 67);
+            this.MenuReportes.Text = "Reportes";
+            this.MenuReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // MenuAcercaDe
             // 
-            this.MenuAcercaDe.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
+            this.MenuAcercaDe.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
             this.MenuAcercaDe.IconColor = System.Drawing.Color.Black;
             this.MenuAcercaDe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.MenuAcercaDe.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -95,83 +172,6 @@
             this.label1.Text = "Sistema de ventas";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // MenuReportes
-            // 
-            this.MenuReportes.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
-            this.MenuReportes.IconColor = System.Drawing.Color.Black;
-            this.MenuReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MenuReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MenuReportes.Name = "MenuReportes";
-            this.MenuReportes.Size = new System.Drawing.Size(65, 67);
-            this.MenuReportes.Text = "Reportes";
-            this.MenuReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // MenuProveedores
-            // 
-            this.MenuProveedores.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
-            this.MenuProveedores.IconColor = System.Drawing.Color.Black;
-            this.MenuProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MenuProveedores.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MenuProveedores.Name = "MenuProveedores";
-            this.MenuProveedores.Size = new System.Drawing.Size(84, 67);
-            this.MenuProveedores.Text = "Proveedores";
-            this.MenuProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // MenuClientes
-            // 
-            this.MenuClientes.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
-            this.MenuClientes.IconColor = System.Drawing.Color.Black;
-            this.MenuClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MenuClientes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MenuClientes.Name = "MenuClientes";
-            this.MenuClientes.Size = new System.Drawing.Size(61, 67);
-            this.MenuClientes.Text = "Clientes";
-            this.MenuClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // MenuCompras
-            // 
-            this.MenuCompras.IconChar = FontAwesome.Sharp.IconChar.DollyFlatbed;
-            this.MenuCompras.IconColor = System.Drawing.Color.Black;
-            this.MenuCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MenuCompras.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MenuCompras.Name = "MenuCompras";
-            this.MenuCompras.Size = new System.Drawing.Size(67, 67);
-            this.MenuCompras.Text = "Compras";
-            this.MenuCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // MenuVentas
-            // 
-            this.MenuVentas.IconChar = FontAwesome.Sharp.IconChar.Tags;
-            this.MenuVentas.IconColor = System.Drawing.Color.Black;
-            this.MenuVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MenuVentas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MenuVentas.Name = "MenuVentas";
-            this.MenuVentas.Size = new System.Drawing.Size(60, 67);
-            this.MenuVentas.Text = "Ventas";
-            this.MenuVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // MenuMantenimiento
-            // 
-            this.MenuMantenimiento.IconChar = FontAwesome.Sharp.IconChar.Tools;
-            this.MenuMantenimiento.IconColor = System.Drawing.Color.Black;
-            this.MenuMantenimiento.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MenuMantenimiento.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MenuMantenimiento.Name = "MenuMantenimiento";
-            this.MenuMantenimiento.Size = new System.Drawing.Size(101, 67);
-            this.MenuMantenimiento.Text = "mantenimiento";
-            this.MenuMantenimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // MenuUsuarios
-            // 
-            this.MenuUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserCog;
-            this.MenuUsuarios.IconColor = System.Drawing.Color.Black;
-            this.MenuUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MenuUsuarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MenuUsuarios.Name = "MenuUsuarios";
-            this.MenuUsuarios.Size = new System.Drawing.Size(64, 67);
-            this.MenuUsuarios.Text = "Usuarios";
-            this.MenuUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,6 +181,7 @@
             this.Controls.Add(this.menu);
             this.Controls.Add(this.Menutitulo);
             this.Name = "Inicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menu.ResumeLayout(false);

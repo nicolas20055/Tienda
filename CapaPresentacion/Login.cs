@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaDatos;
 using System.Windows.Forms;
+
 
 namespace CapaPresentacion
 {
@@ -57,6 +59,11 @@ namespace CapaPresentacion
             txtDocumento.Text = "";
             txtClave.Text = "";
             this.Show();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            CapaDatos.PruebaConexion.Probar();
         }
     }
 }

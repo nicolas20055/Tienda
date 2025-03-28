@@ -37,6 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.PruebaConexion = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,11 +145,25 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // PruebaConexion
+            // 
+            this.PruebaConexion.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.PruebaConexion.IconColor = System.Drawing.Color.Black;
+            this.PruebaConexion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.PruebaConexion.Location = new System.Drawing.Point(449, 210);
+            this.PruebaConexion.Name = "PruebaConexion";
+            this.PruebaConexion.Size = new System.Drawing.Size(75, 23);
+            this.PruebaConexion.TabIndex = 9;
+            this.PruebaConexion.Text = "prueba";
+            this.PruebaConexion.UseVisualStyleBackColor = true;
+            this.PruebaConexion.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 286);
+            this.Controls.Add(this.PruebaConexion);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.label4);
@@ -179,5 +194,6 @@
         private System.Windows.Forms.Label label4;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton btnCancelar;
+        private FontAwesome.Sharp.IconButton PruebaConexion;
     }
 }

@@ -16,5 +16,10 @@ namespace Tienda.Formularios
         {
             InitializeComponent();
         }
+
+        private void FormReportesFechas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

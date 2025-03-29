@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//cambios
 namespace Tienda.Formularios
 {
     public partial class FormBuscarComprobante : Form

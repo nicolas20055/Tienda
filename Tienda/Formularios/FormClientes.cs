@@ -62,8 +62,9 @@ namespace Tienda.Formularios
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Controlador.ControladorCliente objetoCliente = new Controlador.ControladorCliente();
-            objetoCliente.AgregarCliente(txtNombre,TxtApellido1,txtApellido2); 
+            objetoCliente.AgregarCliente(txtNombre, TxtApellido1, txtApellido2);
             objetoCliente.MostrarClientes(dgvClientes);
+            objetoCliente.LimpiarCampos( txtid,txtNombre, TxtApellido1, txtApellido2);
         }
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -75,9 +76,30 @@ namespace Tienda.Formularios
         private void btnModificar_Click(object sender, EventArgs e)
         {
             Controlador.ControladorCliente objetoCliente = new Controlador.ControladorCliente();
-            objetoCliente.ModificarCliente(txtid,txtNombre, TxtApellido1, txtApellido2);
+            objetoCliente.ModificarCliente(txtid, txtNombre, TxtApellido1, txtApellido2);
             objetoCliente.MostrarClientes(dgvClientes);
+            objetoCliente.LimpiarCampos(txtid, txtNombre, TxtApellido1, txtApellido2);
+
 
         }
+
+        private void Eliminar_Click(object sender, EventArgs e)
+        {
+            Controlador.ControladorCliente objetoCliente = new Controlador.ControladorCliente();
+            objetoCliente.ElimiarCliente(txtid);
+            objetoCliente.MostrarClientes(dgvClientes);
+            objetoCliente.LimpiarCampos(txtid, txtNombre, TxtApellido1, txtApellido2);
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Controlador.ControladorCliente objetoCliente = new Controlador.ControladorCliente();
+            objetoCliente.LimpiarCampos(txtid, txtNombre, TxtApellido1, txtApellido2);
+
+        }
+
+
     }
+}
 

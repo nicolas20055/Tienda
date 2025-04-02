@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Tienda.Configuracion;
+using Tienda.Modelos;
 
 namespace Tienda.Controlador
 {
@@ -124,10 +126,18 @@ namespace Tienda.Controlador
 
             try
             {
-                objetoCliente.Id_cliente = int.Parse(id.Text);
+                int idCliente;
+                if (!int.TryParse(id.Text, out idCliente))
+                {
+                    MessageBox.Show("El ID ingresado no es válido. Asegúrate de seleccionar un registro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                objetoCliente.Id_cliente = idCliente;
                 objetoCliente.Nombre = nombre.Text;
                 objetoCliente.Ap_paterno = ap_paterno.Text;
                 objetoCliente.Ap_materno = ap_materno.Text;
+
 
                 MySqlConnection conexion = objetoConexion.EstablecerConexion();
 
@@ -152,6 +162,48 @@ namespace Tienda.Controlador
                 objetoConexion.CerrarConexion();
             }
         }
-     
+        public void LimpiarCampos(TextBox id, TextBox nombre, TextBox ap_paterno, TextBox ap_materno)
+        {
+            id.Text = "";
+            nombre.Text = "";
+            ap_paterno.Text = "";
+            ap_materno.Text = "";
+        }
+        public void ElimiarCliente(TextBox id)
+        {
+            Configuracion.CConexion objetoConexion = new Configuracion.CConexion();
+            Modelos.Cliente objetoCliente = new Modelos.Cliente();
+
+            string consulta = "DELETE FROM cliente WHERE ID_cliente = @id;";
+            try
+            {
+              
+
+                objetoCliente.Id_cliente = int.Parse(id.Text);
+                
+
+                MySqlConnection conexion = objetoConexion.EstablecerConexion();
+
+
+                MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+                comando.Parameters.AddWithValue("@id", objetoCliente.Id_cliente);
+
+
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Se elimino correctamente");
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al eliminar el registro" + e.ToString());
+            }
+            finally
+            {
+                objetoConexion.CerrarConexion();
+            }
+        }
+
+
     }
 }

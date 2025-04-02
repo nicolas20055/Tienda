@@ -16,5 +16,20 @@ namespace Tienda.Formularios
         {
             InitializeComponent();
         }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

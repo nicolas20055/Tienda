@@ -31,7 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.Guardar = new System.Windows.Forms.Button();
+            this.Eliminar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.TxtPrecio = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.btnLimpiar);
             this.groupBox1.Controls.Add(this.btnModificar);
-            this.groupBox1.Controls.Add(this.Guardar);
+            this.groupBox1.Controls.Add(this.Eliminar);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.txtStock);
             this.groupBox1.Controls.Add(this.TxtPrecio);
@@ -69,6 +69,7 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Producto";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnLimpiar
             // 
@@ -85,7 +86,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.Red;
+            this.btnModificar.BackColor = System.Drawing.Color.Yellow;
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Location = new System.Drawing.Point(25, 231);
@@ -95,17 +96,17 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             // 
-            // Guardar
+            // Eliminar
             // 
-            this.Guardar.BackColor = System.Drawing.Color.Green;
-            this.Guardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Guardar.Location = new System.Drawing.Point(170, 231);
-            this.Guardar.Name = "Guardar";
-            this.Guardar.Size = new System.Drawing.Size(134, 42);
-            this.Guardar.TabIndex = 9;
-            this.Guardar.Text = "Guardar";
-            this.Guardar.UseVisualStyleBackColor = false;
+            this.Eliminar.BackColor = System.Drawing.Color.Red;
+            this.Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Eliminar.Location = new System.Drawing.Point(170, 231);
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(134, 42);
+            this.Eliminar.TabIndex = 9;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseVisualStyleBackColor = false;
             // 
             // btnGuardar
             // 
@@ -210,7 +211,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "FormProductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormProductos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -225,7 +228,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button Guardar;
+        private System.Windows.Forms.Button Eliminar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.TextBox TxtPrecio;

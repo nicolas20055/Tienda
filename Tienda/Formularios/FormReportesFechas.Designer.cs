@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.DDD = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.DDD = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -55,40 +55,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consulta De Ventas Por Fecha";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Desde";
-            // 
-            // DDD
-            // 
-            this.DDD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DDD.Location = new System.Drawing.Point(67, 37);
-            this.DDD.Name = "DDD";
-            this.DDD.Size = new System.Drawing.Size(200, 20);
-            this.DDD.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Hasta";
-            // 
-            // dtpHasta
-            // 
-            this.dtpHasta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpHasta.Location = new System.Drawing.Point(67, 69);
-            this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(200, 20);
-            this.dtpHasta.TabIndex = 3;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.SteelBlue;
@@ -100,6 +66,40 @@
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            // 
+            // dtpHasta
+            // 
+            this.dtpHasta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpHasta.Location = new System.Drawing.Point(67, 69);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(200, 20);
+            this.dtpHasta.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Hasta";
+            // 
+            // DDD
+            // 
+            this.DDD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DDD.Location = new System.Drawing.Point(67, 37);
+            this.DDD.Name = "DDD";
+            this.DDD.Size = new System.Drawing.Size(200, 20);
+            this.DDD.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Desde";
             // 
             // dgvVentas
             // 
@@ -138,7 +138,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvVentas);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "FormReportesFechas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormReportesFechas";
             this.Load += new System.EventHandler(this.FormReportesFechas_Load);
             this.groupBox1.ResumeLayout(false);

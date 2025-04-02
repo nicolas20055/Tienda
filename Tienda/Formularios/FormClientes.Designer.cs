@@ -31,7 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.Guardar = new System.Windows.Forms.Button();
+            this.Eliminar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtApellido2 = new System.Windows.Forms.TextBox();
             this.TxtApellido1 = new System.Windows.Forms.TextBox();
@@ -53,7 +53,7 @@
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.btnLimpiar);
             this.groupBox1.Controls.Add(this.btnModificar);
-            this.groupBox1.Controls.Add(this.Guardar);
+            this.groupBox1.Controls.Add(this.Eliminar);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.txtApellido2);
             this.groupBox1.Controls.Add(this.TxtApellido1);
@@ -87,7 +87,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.Red;
+            this.btnModificar.BackColor = System.Drawing.Color.Yellow;
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Location = new System.Drawing.Point(26, 212);
@@ -96,18 +96,19 @@
             this.btnModificar.TabIndex = 10;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // Guardar
+            // Eliminar
             // 
-            this.Guardar.BackColor = System.Drawing.Color.Green;
-            this.Guardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Guardar.Location = new System.Drawing.Point(157, 212);
-            this.Guardar.Name = "Guardar";
-            this.Guardar.Size = new System.Drawing.Size(134, 42);
-            this.Guardar.TabIndex = 9;
-            this.Guardar.Text = "Guardar";
-            this.Guardar.UseVisualStyleBackColor = false;
+            this.Eliminar.BackColor = System.Drawing.Color.Red;
+            this.Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Eliminar.Location = new System.Drawing.Point(157, 212);
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(134, 42);
+            this.Eliminar.TabIndex = 9;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseVisualStyleBackColor = false;
             // 
             // btnGuardar
             // 
@@ -120,6 +121,7 @@
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtApellido2
             // 
@@ -196,6 +198,7 @@
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.Size = new System.Drawing.Size(435, 375);
             this.dgvClientes.TabIndex = 1;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label5
@@ -217,6 +220,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "FormClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormClientes";
@@ -239,7 +243,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button Guardar;
+        private System.Windows.Forms.Button Eliminar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtApellido2;
         private System.Windows.Forms.TextBox TxtApellido1;

@@ -12,9 +12,16 @@ namespace Tienda.Formularios
 {
     public partial class FormClientes : Form
     {
+        private object txtApPaterno;
+
         public FormClientes()
         {
             InitializeComponent();
+            Controlador.ControladorCliente objetoControladorCliente = new Controlador.ControladorCliente();
+            objetoControladorCliente.MostrarClientes(dgvClientes);
+
+            txtid.ReadOnly = true;
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -51,5 +58,26 @@ namespace Tienda.Formularios
         {
 
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Controlador.ControladorCliente objetoCliente = new Controlador.ControladorCliente();
+            objetoCliente.AgregarCliente(txtNombre,TxtApellido1,txtApellido2); 
+            objetoCliente.MostrarClientes(dgvClientes);
+        }
+
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Controlador.ControladorCliente objetoCliente = new Controlador.ControladorCliente();
+            objetoCliente.seleccionar(dgvClientes, txtid, txtNombre, TxtApellido1, txtApellido2);
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Controlador.ControladorCliente objetoCliente = new Controlador.ControladorCliente();
+            objetoCliente.ModificarCliente(txtid,txtNombre, TxtApellido1, txtApellido2);
+            objetoCliente.MostrarClientes(dgvClientes);
+
+        }
     }
-}
+

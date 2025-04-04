@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\FormBuscarComprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\FormProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\FormReportesFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\FormVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>
